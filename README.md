@@ -35,7 +35,7 @@ A navigation-based SEO audit tool that crawls website navigation links and ident
 ```bash
 # 1. Clone the repository
 git clone <repository-url>
-cd SEO-Audit-Tool-main
+cd SEO-Audit-Tool
 
 # 2. Start the application
 docker compose up --build
