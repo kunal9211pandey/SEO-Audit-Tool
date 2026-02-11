@@ -97,7 +97,7 @@ If all commands execute without errors, Docker is properly installed.
 
 ---
 
-## Running the Application
+## Running the Application Using Docker
 
 ### Start the Application
 
