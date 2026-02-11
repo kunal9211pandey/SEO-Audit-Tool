@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical SEO Audit Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Technical SEO Audit Tool</h1>
+        <p class="subtitle">Analyze navigation links for technical SEO issues</p>
+
+        <div class="input-section">
+            <div class="input-group">
+                <input type="text" id="urlInput" placeholder="Enter website URL (e.g., https://example.com)" value="https://example.com">
+                <button id="startAudit" onclick="startAudit()">Start Audit</button>
+            </div>
+            <div class="example-urls">
+                Try: 
+                <a href="#" onclick="setUrl('https://www.djangoproject.com/'); return false;">djangoproject.com</a>
+                <a href="#" onclick="setUrl('https://www.python.org'); return false;">python.org</a>
+                <a href="#" onclick="setUrl('https://fastapi.tiangolo.com'); return false;">fastapi.tiangolo.com</a>
+                <a href="#" onclick="setUrl('https://flask.palletsprojects.com'); return false;">flask.palletsprojects.com</a>
+                <a href="#" onclick="setUrl('https://www.zensar.com/'); return false;">zensar.com</a>
+                <a href="#" onclick="setUrl('https://paruluniversity.ac.in/'); return false;">paruluniversity.ac.in</a>
+            </div>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Crawling navigation links and analyzing pages...</p>
+            <p style="font-size: 14px; color: #666; margin-top: 10px;">This may take a few moments.</p>
+        </div>
+
+        <div class="results" id="results">
+            <h2>Audit Results</h2>
+            <div id="auditUrl" style="color: #666; margin-bottom: 20px;"></div>
+            
+            <div class="summary" id="summary"></div>
+            
+            <h3>Crawled Pages (<span id="pageCount">0</span>)</h3>
+            <div class="pages-list" id="pagesList"></div>
+        </div>
+
+        <div id="error" style="display: none;" class="error-message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
